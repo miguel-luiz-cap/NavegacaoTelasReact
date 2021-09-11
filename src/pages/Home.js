@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { ImageBackground, View, Text, StyleSheet } from 'react-native';
 
+
 export default function Home() {
   return (
     <View style={estilo.container}>
@@ -9,7 +10,7 @@ export default function Home() {
         style={estilo.fundoimg}
         resizeMode="cover">
 
-      <Text style={estilo.titulo}>App de Musica</Text>
+      <Text style={estilo.titulo}>App de Música</Text>
       </ImageBackground>
     </View>
   );
@@ -18,7 +19,6 @@ export default function Home() {
 const estilo = StyleSheet.create({
   container: {
     flex: 1,
-    //color: '#fff'
   },
   fundoimg: {
     flex: 1,
