@@ -4,8 +4,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { MaterialCommunityIcons, MaterialIcons } from '@expo/vector-icons';
 
-import Artista from './pages/Artista';
-import Musica from './pages/Musica';
+import Artista from './RotasButton';
+import Musica from './RotasButtonMusica';//from './pages/Musica';
 import Home from './pages/Home';
 
 const Tab = createBottomTabNavigator();
@@ -19,9 +19,12 @@ export default function Rotas() {
         activeTintColor: '#000',
         inactiveTintColor: '#FFFF00',
         activeBackgroundColor: '#F0F',
+        
       }}
       screenOptions={{
-        tabBarStyle: { backgroundColor: '#000' },
+        tabBarStyle: { backgroundColor: '#000'},
+        headerStyle: { backgroundColor: '#000', height: 80},
+        headerTintColor: '#FF0',
       }}>
       <Tab.Screen
         name="Home"
@@ -40,6 +43,8 @@ export default function Rotas() {
         options={{
           tabBarLabel: 'Artistas',
           title: 'Artistas',
+          showTitle: false,
+
           tabBarIcon: ({ color, size }) => (
             <MaterialCommunityIcons
               name="account-music"

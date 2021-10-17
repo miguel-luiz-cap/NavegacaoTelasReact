@@ -1,33 +1,21 @@
 import * as React from 'react';
 import { ImageBackground, View, Text, StyleSheet } from 'react-native';
 
+import estilo from '../../components/estilo';
 
 export default function Home() {
   return (
     <View style={estilo.container}>
       <ImageBackground
-        source={require('../../assets/Piano.png')}
+        source={require('../../assets/fundo.jpg')}
         style={estilo.fundoimg}
         resizeMode="cover">
 
-      <Text style={estilo.titulo}>App de Música</Text>
+      <View style={estilo.bloco}> 
+        <Text style={estilo.titulo_home}>{"App de Música\nBem Vindo"}</Text>
+      </View>
       </ImageBackground>
     </View>
   );
 }
 
-const estilo = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  fundoimg: {
-    flex: 1,
-    justifyContent: 'center',
-  },
-  titulo: {
-    color: '#FFF',
-    fontSize: 30,
-    textAlign: 'center',
-    fontWeight: 'bold',
-  }
-});
